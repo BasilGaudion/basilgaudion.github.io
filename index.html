@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Pass Generator</h1>
+
+        <div class="password-container">
+            <div class="input-password">
+                <input type="text" disabled>
+                <span class="copy-icon"></span>
+            </div>
+
+            <div class="parameters">
+                <div class="password-length">
+                    <label class="title">password Length</label>
+                    <span>15</span> <br>
+                    <input type="range" min="1" max="30" value="15" step="1">
+                </div>
+
+                <div class="settings">
+                    <label class="title">Settings</label>
+                    <ul>
+                        <li class="option">
+                            <input type="checkbox" id="lowercase">
+                            <p>Lowercase (a-z)</p>
+                        </li>
+                        <li class="option">
+                            <input type="checkbox" id="uppercase">
+                            <p>Uppercase (A-Z)</p>
+                        </li>
+                        <li class="option">
+                            <input type="checkbox" id="numbers">
+                            <p>Numbers (0-9)</p>
+                        </li>
+                        <li class="option">
+                            <input type="checkbox" id="symbols">
+                            <p>Symbols (!-&?@^+)</p>
+                        </li>
+                    </ul>
+                    <button class="generate">generate password</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
