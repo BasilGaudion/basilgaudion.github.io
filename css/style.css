@@ -82,7 +82,25 @@ body {
 .copied-alert.fade-out {
     opacity: 0;
     transition: opacity 1.3s ease-out;
-  }
+}
+
+.error-alert  {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 23px;
+    background-color: #b80c09;
+    border-radius: 5px;
+    height: 25px;
+    color: #fff;
+    position: absolute;
+    width: 354px;
+}
+
+.error-alert.fade-out {
+    opacity: 0;
+    transition: opacity 1.3s ease-out;
+}
 
 .password-length {
     margin: 35px 25px;

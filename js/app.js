@@ -93,6 +93,9 @@ function  handleCopy() {
         copyAlert.style.display = 'flex';
         copyAlert.style.backgroundColor = '#b80c09';
         copyAlertText.textContent = "You must generate a password";
+        setTimeout(() => {
+            copyAlert.classList.add('fade-out');
+          }, 2000);
         return
     }
 
