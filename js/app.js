@@ -79,22 +79,24 @@ function handleLengthValue() {
     lengthNumber.textContent = lenghtValue;
 }
 
-// Fonction de copie duu mot de passe et alertes à l'ecran
+// Fonction de copie du mot de passe et alertes à l'ecran
 function  handleCopy() {
     const clipboard = document.querySelector('.copy-icon');
     const inputTextValue = document.querySelector('.password-text').value;
     const copyAlert = document.querySelector('.copied-alert');
-    const copyAlertText = document.querySelector('.copied-alert p');
+    const errorAlert = document.querySelector('.error-alert');
 
+    // vidage des classes et style des alertes
     copyAlert.classList.remove('fade-out');
+    errorAlert.classList.remove('fade-out');
+    copyAlert.style.display = 'none';
+    errorAlert.style.display = 'none';
     
     // gestion d'alerte si rien à copier
     if(!inputTextValue) {
-        copyAlert.style.display = 'flex';
-        copyAlert.style.backgroundColor = '#b80c09';
-        copyAlertText.textContent = "You must generate a password";
+        errorAlert.style.display = 'flex';
         setTimeout(() => {
-            copyAlert.classList.add('fade-out');
+            errorAlert.classList.add('fade-out');
           }, 2000);
         return
     }
