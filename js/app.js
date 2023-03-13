@@ -10,7 +10,7 @@ function init() {
 
     // curseur de longueur
     const lenghtCursor = document.querySelector('.length');
-    lenghtCursor.addEventListener('mousemove', handleLengthValue);
+    lenghtCursor.addEventListener('input', handleLengthValue);
 }
 
 function handleGenerate() {
